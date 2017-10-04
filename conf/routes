@@ -1,0 +1,33 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /index1                          controllers.Application.index1()
+POST        /index1                           controllers.Application.index1()
+GET         /index2                          controllers.Application.index2()
+POST        /index2                           controllers.Application.index2()
+GET         /authUser/:accessToken     controllers.Application.authUser(accessToken: String)
+GET         /addstudent                          controllers.Application.addstudent()
+
+
+
+
+GET         /game1index/                           controllers.Application.game1index()
+POST        /game2index/                           controllers.Application.game2index()
+GET         /game1/:accessToken                    controllers.Application.game1(accessToken: String)
+GET         /game2/:accessToken                    controllers.Application.game2(accessToken: String)
+
+GET         /puzzlegame1index/                           controllers.PuzzleGame.puzzleGame1index()
+POST        /puzzlegame1index/                           controllers.PuzzleGame.puzzleGame1index()
+GET         /puzzlegame1/:accessToken                    controllers.PuzzleGame.puzzleGame1(accessToken: String)
+
+GET         /puzzlegame2index/                           controllers.PuzzleGame.puzzleGame2index()
+POST        /puzzlegame2index/                           controllers.PuzzleGame.puzzleGame2index()
+GET         /puzzlegame2/:accessToken                    controllers.PuzzleGame.puzzleGame2(accessToken: String)
+
+
+# Map static resources from the /public folder to the /assets URL path
+#POST         /unity/tst2/*file     controllers.Assets.at(path="/public/tst2/", file)
+#GET         /unity/tst2/*file     controllers.Assets.at(path="/public/tst2/", file)
+GET         /assets/*file        controllers.Assets.at(path="/public", file)

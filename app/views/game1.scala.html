@@ -1,0 +1,143 @@
+@(user: com.restfb.types.User, student : models.Student, appId: String)
+
+@import com.restfb.types.User.Picture
+@import com.restfb.types.User.Picture._
+
+@main("How much SGPA will you get this semester!") {
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-md-offset-5"> </div>
+
+            <div class="col-md-2 col-md-offset-5">
+        <p>
+            <h2> How much SGPA will you get this semester!</h2>
+        </p>
+
+        <!--<p>-->
+            <!--<img class="profileimage" name="" src="https://graph.facebook.com/@user.getId()/picture" width="50" height="50" alt="">-->
+          <!--<h5>  Name : @student.name  @student.fbId</h5>-->
+                <!--<h6>  SG (this semester) : @student.cgnext </h6>-->
+
+                <!--</p>-->
+
+                <!--<img class="" name="" src="assets/images/modi1.jpg"  alt="">-->
+
+
+     <!--<p>-->
+
+
+        <!--<div id="" class="" data-ride="">-->
+            <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+            <!--<div class="" role="listbox">-->
+                <!--<div class="">-->
+                    <!--<div >-->
+                        <!--<h4>@user.getFirstName()  @user.getLastName()</h4>-->
+                        <!--<h4>@student.name</h4>-->
+                        <!--<p>This semester you will get </p>-->
+                    <!--</div>-->
+
+
+        <!--<span id="imagespan" class="imagespan" >-->
+
+
+            <!--<canvas id="canvas" width="500" height="500">   </canvas>-->
+
+
+                <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+
+                        <div class="card hovercard">
+                            <div class="cardheader">
+
+                            </div>
+                            <div class="avatar">
+
+                                <img alt="" src="https://graph.facebook.com/@user.getId()/picture">
+                            </div>
+                            <div class="info">
+                                <div class="title">
+                                    <h1> @student.name</h1>
+                                </div>
+                                <p class="">Your SGPA in last semester was = @student.cglast</p>
+
+                                <div class="desc2">This semester it will be = @student.cgnext</div>
+                                <script>
+                                  if (@student.cglast == 9.8)
+                                    {
+                                $("p").addClass("hidden");
+                                     }
+
+                                </script>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                    <!--<button type="button" href="@routes.Application.index1()" class="btn btn-primary btn-block">Check Your's</button>-->
+
+
+                </div>
+            </div>
+<!--</span>-->
+
+                <a id="image" href="https://www.facebook.com/dialog/feed?app_id=@appId
+                &picture=https://nameless-reaches-21214.herokuapp.com/assets/images/download.jpeg
+                &name=This semester @student.name will get%20  @student.cgnext
+                &display=page&caption=Click here !
+                &link=https://apps.facebook.com/@appId
+                &redirect_uri=https://facebook.com"  target="_blank">
+                    <!--Share on Facebook-->
+                    <button type="button"  id="share" href="@routes.Application.index1()" class="btn btn-primary btn-block">Share it on facebook</button>
+
+                </a>
+                <a>  </a>
+
+                <a class="hidden" href="https://www.facebook.com/dialog/feed?app_id=@appId
+                &picture=https://nameless-reaches-21214.herokuapp.com/assets/images/download.jpeg
+                &name=This semester @student.name will get%20  @student.cgnext
+                &description=Last semester SG=%20@student.cglast?
+                &display=page&caption=Click here to know your's !
+                &link=https://apps.facebook.com/@appId
+                &redirect_uri=https://facebook.com" target="_blank">
+                    <!--Share on Facebook-->
+                    <button type="button" href="@routes.Application.index1()" class="btn btn-primary btn-block">Share it on facebook</button>
+
+                </a>
+
+                <script>
+                                  if (@student.cglast != 9.8)
+                                    {
+                                $("a").last().removeClass("hidden");
+                                $("a").first().addClass("hidden");
+
+                                     }
+
+                                </script>
+
+
+
+            </div>
+        </div>
+
+     </p>
+
+
+            </div>
+        </div>
+
+    </div>
+<div id="img-out"></div>
+
+
+}

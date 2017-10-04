@@ -1,0 +1,52 @@
+@(title: String, students : List [models.Student])
+
+<html>
+
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+
+<body>
+
+<h1>Number of users:- @students.length </h1>
+<div class="well">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>SG Last Sem</th>
+            <th>Facebook ID</th>
+            <th style="width: 36px;"></th>
+        </tr>
+        </thead>
+
+        <tbody>
+@for(i <- students) {
+@student(i)
+}
+        </tbody>
+
+    </table>
+</div>
+
+<script>
+$(document).ready(function () {
+    size_li = $("#myList li").size();
+    x=100;
+    $('#myList li:lt('+x+')').show();
+    $('#loadMore').click(function () {
+        x= (x+100 <= size_li) ? x+100 : size_li;
+        $('#myList li:lt('+x+')').show();
+    });
+    $('#showLess').click(function () {
+        x=(x-100<0) ? 100 : x-100;
+        $('#myList li').not(':lt('+x+')').hide();
+    });
+});
+
+            </script>
+
+    <div id="loadMore">Load more</div>
+    <div id="showless">show less</div>
+
+</body>
+</html>
