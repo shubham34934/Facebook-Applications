@@ -7,10 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-/**
- * Created by manjeet on 25/12/15.
- */
-
 @Entity
 public class Student extends Model {
     @Id
