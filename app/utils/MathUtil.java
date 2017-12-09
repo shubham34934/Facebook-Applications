@@ -1,8 +1,5 @@
 package utils;
 
-/**
- * Created by manjeet on 14/08/15.
- */
 
 import java.util.Random;
 
