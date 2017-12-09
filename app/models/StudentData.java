@@ -1,8 +1,5 @@
 package models;
 
-/**
- * Created by manjeet on 25/12/15.
- */
 public class StudentData {
 
     public static Student[] matchData = {
