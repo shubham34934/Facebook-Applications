@@ -8,9 +8,6 @@ import com.restfb.types.User.Picture;
 import models.StudentData;
 import utils.MathUtil;
 
-/**
- * Created by manjeet on 25/12/15.
- */
 public class MatchEngine {
     private static MatchEngine ourInstance = new MatchEngine();
 
