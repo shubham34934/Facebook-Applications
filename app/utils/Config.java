@@ -1,8 +1,5 @@
 package utils;
 
-/**
- * Created by manjeet on 25/12/15.
- */
 public class Config {
 
     public final static String game1_appName = "SGPA";
